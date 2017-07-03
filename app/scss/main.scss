@@ -1,0 +1,12 @@
+@import "app/libs/variables/variables";
+//HELPERS
+* {
+	box-sizing: border-box;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	width: 100%;
+	clear: both;
+}
+//HELPERS

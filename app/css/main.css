@@ -1,0 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both; }
