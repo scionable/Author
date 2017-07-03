@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two:400i|Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:700i|Open+Sans:300,400,600,700');
 @import "../libs/variables/variables";
 //HELPERS
 * {
@@ -25,8 +25,8 @@ body {
 	margin: 0 auto;
 }
 
+/*HEADER BLOCK STYLES START*/
 .header {
-	padding: 0 10px;
 	.head {
 		display: flex;
 		justify-content: space-between;
@@ -38,7 +38,7 @@ body {
 				font-size: 43px;
 				line-height: 45px;
 				text-decoration: none;
-				color: $logo;
+				color: $main_color;
 			}
 		}
 		.menu {
@@ -56,18 +56,102 @@ body {
 						border-bottom: 3px solid transparent;
 						transition: all 0.3s ease;
 						&:hover {
-							color: $logo;
+							color: $main_color;
 							background: $links_hover_bg;
-							border-bottom: 3px solid $logo;
+							border-bottom: 3px solid $main_color;
 						}
 					}
 					a.active {
-						color: $logo;
+						color: $main_color;
 						background: $links_hover_bg;
-						border-bottom: 3px solid $logo;
+						border-bottom: 3px solid $main_color;
 					}
 				}
 			}
 		}
 	}
 }
+.header {
+	.slider_block {
+		.swiper-container {
+			width: 100%;
+			height: 565px;
+			.btn_slider {
+				position: absolute;
+				top: 50%;
+				z-index: 10;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				text-align: center;
+				background: $slider_btn_bg;
+				transform: translateY(-50%);
+				cursor: pointer;
+				opacity: 0.8;
+				transition: all 0.3s ease;
+				&:hover {
+					opacity: 1;
+				}
+				.fa {
+					font-size: 40px;
+					line-height: 50px;
+					color: $main_color;
+				}
+			}
+			.button-prev {
+				left: 30px;
+			}
+			.button-next {
+				right: 30px;
+			}
+			.swiper-slide {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.slider_text {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 100%;
+					color: $white;
+					text-align: center;
+					padding: 0 20px;
+					transform: translate(-50%, -50%);
+					.title {
+						font-size: 63px;
+						line-height: 80px;
+						font-weight: 600;
+						margin-bottom: 30px;
+					}
+					.subtitle {
+						display: block;
+						font-size: 23px;
+						line-height: 37px;
+						margin-bottom: 60px;
+					}
+					.btn_learn_more {
+						display: inline-block;
+						padding: 22px 36px;
+						border: 3px solid $white;
+						font-size: 26px;
+						text-decoration: none;
+						color: $white;
+						border-radius: 6px;
+						transition: all 0.3s ease;
+						&:hover {
+							color: $white;
+							border: 3px solid $main_color;
+							background: $main_color;
+						}
+					}
+				}
+				img {
+					vertical-align: top;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+/*HEADER BLOCK STYLES END*/
