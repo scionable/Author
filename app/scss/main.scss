@@ -1,4 +1,5 @@
-@import "app/libs/variables/variables";
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:400i|Open+Sans:300,400,600,700');
+@import "../libs/variables/variables";
 //HELPERS
 * {
 	box-sizing: border-box;
@@ -10,3 +11,63 @@
 	clear: both;
 }
 //HELPERS
+
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 26px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	max-width: 1070px;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 0 10px;
+	.head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.logo_wrapper {
+			.logo {
+				display: block;
+				font-family: 'Lobster Two', cursive;
+				font-size: 43px;
+				line-height: 45px;
+				text-decoration: none;
+				color: $logo;
+			}
+		}
+		.menu {
+			ul {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 15px;
+				li {
+					a {
+						display: block;
+						padding: 25px 15px;
+						color: $links_color;
+						text-decoration: none;
+						border-bottom: 3px solid transparent;
+						transition: all 0.3s ease;
+						&:hover {
+							color: $logo;
+							background: $links_hover_bg;
+							border-bottom: 3px solid $logo;
+						}
+					}
+					a.active {
+						color: $logo;
+						background: $links_hover_bg;
+						border-bottom: 3px solid $logo;
+					}
+				}
+			}
+		}
+	}
+}
