@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-	max-width: 1070px;
+	max-width: 1170px;
 	margin: 0 auto;
 }
 
@@ -31,6 +31,8 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		max-width: 1170px;
+		margin: 0 auto;
 		.logo_wrapper {
 			.logo {
 				display: block;
@@ -42,34 +44,41 @@ body {
 			}
 		}
 		.menu {
-			ul {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				font-size: 15px;
-				li {
-					a {
-						display: block;
-						padding: 25px 15px;
-						color: $links_color;
-						text-decoration: none;
-						border-bottom: 3px solid transparent;
-						transition: all 0.3s ease;
-						cursor: pointer;
-						&:hover {
-							color: $main_color;
-							background: $links_hover_bg;
-							border-bottom: 3px solid $main_color;
-						}
-					}
-					a.active {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 15px;
+			li {
+				a {
+					display: block;
+					padding: 25px 15px;
+					color: $links_color;
+					text-decoration: none;
+					border-bottom: 3px solid transparent;
+					transition: all 0.3s ease;
+					cursor: pointer;
+					&:hover {
 						color: $main_color;
 						background: $links_hover_bg;
 						border-bottom: 3px solid $main_color;
 					}
 				}
 			}
+			li.active a {
+				color: $main_color;
+				background: $links_hover_bg;
+				border-bottom: 3px solid $main_color;
+			}
 		}
+	}
+	.sticky_block {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 9;
+		background: #fff;
 	}
 }
 .header {
@@ -393,36 +402,60 @@ body {
 		}
 		form {
 			text-align: right;
-			.input_wrapper {
+			.flex_box {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
 				margin-bottom: 30px;
-				.custom_input {
-					font-family: 'Open Sans', sans-serif;
-					height: 44px;
-					background: $white;
-					border-radius: 3px;
+				.input_wrapper {
+					position: relative;
 					margin-right: 30px;
-					padding: 0 20px;
-					font-size: 16px;
 					&:last-child {
 						margin-right: 0;
 					}
+					label {
+						position: absolute;
+						top: 105%;
+						left: 0;
+						text-align: left;
+						font-size: 12px;
+						line-height: 13px;
+						color: $error_message;
+					}
+					.custom_input {
+						font-family: 'Open Sans', sans-serif;
+						height: 44px;
+						background: $white;
+						border-radius: 3px;
+						padding: 0 20px;
+						font-size: 16px;
+					}
 				}
 			}
-			.custom_textarea {
-				font-family: 'Open Sans', sans-serif;
-				width: 100%;
-				max-height: 180px;
-				min-height: 180px;
-				background: $white;
-				border-radius: 3px;
-				font-size: 16px;
-				padding: 20px;
-				overflow: hidden;
-				resize: none;
-				margin-bottom: 30px;
+			.textarea_wrapper {
+				position: relative;
+				.custom_textarea {
+					font-family: 'Open Sans', sans-serif;
+					width: 100%;
+					max-height: 180px;
+					min-height: 180px;
+					background: $white;
+					border-radius: 3px;
+					font-size: 16px;
+					padding: 20px;
+					overflow: hidden;
+					resize: none;
+					margin-bottom: 30px;
+				}
+				label {
+					position: absolute;
+					bottom: 20px;
+					left: 0;
+					text-align: left;
+					font-size: 12px;
+					line-height: 13px;
+					color: $error_message;
+				}
 			}
 			.btn_send {
 				font-family: 'Open Sans', sans-serif;

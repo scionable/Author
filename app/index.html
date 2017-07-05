@@ -11,20 +11,32 @@
 	</head>
 <body>
 	<!--HEADER BLOCK START-->
-	<header class="header">
-		<div class="container">
+	<header id="header" class="header">
+		<div id="navigation">
 			<div class="head">
 				<div class="logo_wrapper">
 					<a class="logo" href="/">Author</a>
 				</div>
-				<nav class="menu">
-					<ul>
-						<li><a class="active" href="#!">Home</a></li>
-						<li><a href="#!">Service</a></li>
-						<li><a href="#!">Portfolio</a></li>
-						<li><a href="#!">Team</a></li>
-						<li><a href="#!">Blog</a></li>
-						<li><a href="#!">Contact</a></li>
+				<nav id="nav">
+					<ul class="menu">
+						<li class="active">
+							<a href="#header">Home</a>
+						</li>
+						<li>
+							<a href="#services">Service</a>
+						</li>
+						<li>
+							<a href="#">Portfolio</a>
+						</li>
+						<li>
+							<a href="#our_team">Team</a>
+						</li>
+						<li>
+							<a href="#">Blog</a>
+						</li>
+						<li>
+							<a href="#contact_us">Contact</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -70,7 +82,7 @@
 
 	<div class="container">
 		<!--SECTION THE TEAM START-->
-		<section class="our_team">
+		<section id="our_team" class="our_team">
 			<h2 class="our_team_title">The Team</h2>
 			<div class="our_team_block">
 				<div class="our_team_block_item">
@@ -103,7 +115,7 @@
 	</div>
 
 	<!--BLOCK SERVICES START-->
-	<div class="services_wrapper">
+	<div id="services" class="services_wrapper">
 		<div class="container">
 			<div class="services">
 				<div class="service_card">
@@ -164,7 +176,7 @@
 
 
 	<!--BLOCK CONTACT US START-->
-	<div class="contact_us_wrapper">
+	<div id="contact_us" class="contact_us_wrapper">
 		<div class="container">
 			<footer class="footer">
 				<h2 class="contact_us_title">Contact Us</h2>
@@ -184,12 +196,18 @@
 						</div>
 					</div>
 					<div class="contact_us_form">
-						<form action="#" method="get">
-							<div class="input_wrapper">
-								<input class="custom_input" type="text" placeholder="Name">
-								<input class="custom_input" type="email" placeholder="Email">
+						<form id="contact_form" action="#" method="get">
+							<div class="flex_box">
+								<div class="input_wrapper">
+									<input name="userName" class="custom_input" type="text" placeholder="Name">
+								</div>
+								<div class="input_wrapper">
+									<input name="userEmail" class="custom_input" type="email" placeholder="Email">
+								</div>
 							</div>
-							<textarea class="custom_textarea" cols="30" rows="10" placeholder="Message"></textarea>
+							<div class="textarea_wrapper">
+								<textarea name="message" class="custom_textarea" placeholder="Message"></textarea>
+							</div>
 							<input type="submit" value="Send" class="btn_send">
 						</form>
 					</div>
