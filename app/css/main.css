@@ -381,7 +381,10 @@ body {
         background: #e44c41; }
   .footer .info_block .company_info .company_info_text {
     display: block;
-    color: #bface2; }
+    color: #bface2;
+    text-decoration: none; }
+  .footer .info_block .company_info a:hover {
+    text-decoration: underline; }
 
 .footer .contact_us_form ::-webkit-input-placeholder {
   color: #c1c1c1; }

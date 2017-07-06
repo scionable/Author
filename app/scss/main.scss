@@ -382,6 +382,10 @@ body {
 			.company_info_text {
 				display: block;
 				color: $company_info_text;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
 			}
 		}
 	}
