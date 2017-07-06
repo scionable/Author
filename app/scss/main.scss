@@ -83,7 +83,6 @@ body {
 }
 .header {
 	.slider_block {
-		margin-bottom: 100px;
 		.swiper-container {
 			width: 100%;
 			height: 565px;
@@ -170,6 +169,7 @@ body {
 /*OUR TEAM BLOCK STYLES START*/
 .our_team {
 	text-align: center;
+	padding-top: 100px;
 	margin-bottom: 100px;
 	.our_team_title {
 		font-size: 42px;

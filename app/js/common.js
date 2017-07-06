@@ -17,14 +17,15 @@ $(function() {
 	/*STICKY NAV*/
 
 	/*SCROLL TO BLOCK START*/
-	$(".menu").on("click", "a", function (event) {
-		event.preventDefault();
+	$(".menu").on("click", "a", function (e) {
+		e.preventDefault();
 		var id = $(this).attr('href'),
-			top = $(id).offset().top-80;
+			top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
 	/*SCROLL TO BLOCK END*/
 
+	$('body').scrollspy({ target: '#navbar' });
 
 
 
